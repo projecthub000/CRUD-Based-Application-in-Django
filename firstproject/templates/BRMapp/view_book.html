@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>View Book Records</title>
+    <link rel='stylesheet' href="{% static 'css/BRMstyle.css' %}"/>
+  </head>
+  <body>
+    <div id='header'>
+      <h1 class="mid" style="color:black;letter-spacing: 4px;">Famous Books And Authors List</h1>
+      <div id='nav'>
+        <a href='/BRMapp/view-books'>View All</a>
+        <a href='/BRMapp/search-book'style="background-color:red;color:black"'>Search</a>
+        <a href='/BRMapp/new-book' style="background-color:blue;color:bisque">Add New</a>
+        <!-- <a href='/BRMapp/logout'>Logout</a> -->
+      </div>
+    </div>
+    <h2 id="view" style="text-align: center;"></h2>
+    <div id='main' style="box-sizing: border-box;
+    display: -webkit-box;">
+      <table>
+        <tr>
+          <th>'Book Id'</th>
+          <th>'Book Title'</th>
+          <th>'Price'</th>
+          <th>'Author'</th>
+          <th>'Publisher'</th>
+        </tr>
+        {% for i in books %}
+          <td style="color: brown;" >{{i.id}}</td>
+          <td>{{i.title}}</td>
+          <td>{{i.price}}</td>
+          <td>{{i.author}}</td>
+          <td>{{i.publisher}}</td>
+
+          <td><a class='btn' href='/BRMapp/edit-book?bookid={{i.id}}'>Edit</a></td><br>
+          <td><a class='btn' href='/BRMapp/delete-book?bookid={{i.id}}'>Delete</a></td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </body>
+</html>

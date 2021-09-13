@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{%static 'css/blocks.css' %}">
+</head>
+<body>
+ <div class="header">
+   <h3 class="text">StartupAMP</h3>
+   <ul class="nav">
+     <li><a class="n" href="">HOME</a></li>
+     <li class="more">
+       <select  clas=="temp" value="MORE DEMOS">
+         <option>
+           <a  href="">Template 1
+           </a>
+          </option>
+         <option>
+            <a href="">Template 2
+            </a>
+          </option>
+         <option>
+              <a href="">Template 3
+              </a>
+         </option>
+         <option>
+            <a href="">Template 4
+                </a>
+         </option>
+         <option>
+          <a href="">Template 5
+          </a>
+         </option>
+       </select>
+     </li>
+     <li><a class="n"  href="">WATCH VIDEO</a></li>
+     <li class="buy"><a class="n" href="">BUYNOW</a></li>
+   </ul>
+ </div>
+ <input type="search" class="search" placeholder="search">
+ <br>
+ <div class="main">
+   <h1><strong>Launch</strong>Your Startup</h1>
+   <p>{{texts}}</p>
+ </div>
+
+
+ </body>
+</html>

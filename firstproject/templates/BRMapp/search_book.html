@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Search Book</title>
+    <link rel='stylesheet' href="{% static 'css/BRMstyle.css' %}"/>
+  </head>
+  <body>
+    <div id='header'>
+      <h1 style="letter-spacing: 4px">Famous Books And Authors List</h1>
+      <div id='nav'>
+        <a href='/BRMapp/view-books'>View All</a>
+        <a href='/BRMapp/new-book'>Add New</a>
+        <a href='/BRMapp/search-book'>Search</a>
+      </div>
+    </div>
+    <h2 id="search"> Search Book Record</h2>
+    <div id='main'>
+      <form action="/BRMapp/search" method='post'>
+        {% csrf_token %}
+        {{form}}
+        <input type='submit' value='Search'>
+      </form>
+      {% if books %}
+       <table>
+         <tr>
+           <th>'Book Title'</th>
+           <th>'Price'</th>
+           <th>'Author'</th>
+           <th>'Publisher'</th>
+         </tr>
+      {% endif %}
+      {% for i in books %}
+      <tr>
+          <td>{{i.title}}</td>
+          <td>{{i.price}}</td>
+          <td>{{i.author}}</td>
+          <td>{{i.publisher}}</td>
+      </tr>
+      {% endfor %}
+      </table>
+    </div>
+  </body>
+</html>

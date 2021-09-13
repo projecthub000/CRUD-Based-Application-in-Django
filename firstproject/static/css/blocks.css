@@ -1,0 +1,71 @@
+body{
+    margin:0px;
+    width:100%;
+    background: #F3904F;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3B4371, #F3904F);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3B4371, #F3904F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.header{
+    background-color:rgb(12, 79, 167);
+    position:relative;
+    top:0px;
+    height:40px;
+    border:2px groove rgb(20, 17, 216);
+}
+.nav{
+    display:flex;
+    flex-wrap:nowrap;
+    justify-content:flex-end;
+    position:relative;
+    bottom:50px;
+}
+li .n{
+    padding:12px;
+    text-decoration: none;
+    color:rgb(245, 12, 12);
+    margin:4px;
+}
+.more .temp{
+    color:darkorange
+}
+li{
+    list-style-type: none;
+}
+.buy{
+    border:2px groove pink;
+    background-color: antiquewhite;
+}
+.text{
+    position: relative;
+    bottom:10px;
+    color:chartreuse
+}
+.main{
+    text-align: center;
+    background-color: yellowgreen;
+    transition: box-shadow 1s;
+    box-shadow: 4px 4px 18px black;
+    background-color: rgba(250, 128, 114, 0.61);
+   
+}
+.main:hover{
+    box-shadow: 2px 2px 18px rgb(140, 0, 255);
+}
+p{
+   width:50%;
+   position:relative;
+   left:50%;
+   right:50%;
+   transform: translate(-50%,-50%);
+   margin-top: 70px;
+}
+.search{
+ position:relative;
+ left:90%;
+
+}
+h1{
+    color:red;
+    text-shadow:1px 1px 3px black;
+}

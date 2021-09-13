@@ -1,0 +1,6 @@
+BEGIN;
+--
+-- Create model employee
+--
+CREATE TABLE "testapp_employee" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "eno" integer NOT NULL, "ename" varchar(30) NOT NULL, "esal" real NOT NULL, "eaddr" varchar(60) NOT NULL);
+COMMIT;

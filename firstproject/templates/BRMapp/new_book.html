@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>AddBook</title>
+    <link rel='stylesheet' href="{% static 'css/BRMstyle.css' %}"/>
+  </head>
+  <body>
+    <div id='header'>
+      <h1 style="letter-spacing: 4px">Famous Books And Authors List</h1>
+      <div id='nav'>
+        <a href='/BRMapp/view-books'>View All</a>
+        <a href='/BRMapp/new-book'>Add New</a>
+        <a href='/BRMapp/search-book'>Search</a>
+      </div>
+    </div>
+    <h2 id="new"> Add New Book Record</h2>
+    <div id='main'>
+      <form action="/BRMapp/add" method='post'>
+        {% csrf_token %}
+        {{form}}
+        <input type='submit' value='Add'>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load  app_tags %}
+ {% get_date as today  %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>greet</title>
+  </head>
+  <body>
+    <h1>
+      Today is {{today|date:'d'}}
+   </h1>
+     {{x|string}}
+   <div>
+     {% dict %}
+     {% for k,v in dicts.items %}
+      <p>{{k}}:{{v}} </p>
+     {% endfor %}
+   </div>
+  </body>
+</html>
